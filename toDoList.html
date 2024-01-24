@@ -6,14 +6,18 @@
     <title>your List</title>
 </head>
 <body>
-    <div class="toDoList">
+    <div class="makeToDoList">
         <h1> Salve sua próxima lista: </h1>
         <p>
-            <input type="text" placeholder="Digite sua tarefa">
+            <input id="item" type="text" placeholder="Digite sua tarefa">
             <button>
                 <img src="public/images/icons8-mais-24.png" alt="add more">
             </button>
         </p>
+        <h1> Estas são suas tarefas: </h1>
+        <div class="toDoList">
+        
+        </div>
     </div>
 </body>
 <style>
@@ -21,7 +25,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #800080;
         }
@@ -32,5 +36,5 @@
         background-color: #8a2be2;
     }
 </style>
-<script src="/toDoList.js"></script>
+<script src="./toDoList.js"></script>
 </html>
