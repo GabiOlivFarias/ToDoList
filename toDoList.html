@@ -7,33 +7,46 @@
 </head>
 <body>
     <div class="makeToDoList">
-        <h1> Salve sua próxima lista: </h1>
-        <p>
+        <div class="container">
+            <h1> Salve sua próxima lista: </h1>
             <input id="item" type="text" placeholder="Digite sua tarefa">
             <button>
-                <img src="public/images/icons8-mais-24.png" alt="add more">
+                <img src="public/images/mais.svg" alt="add more">
             </button>
-        </p>
-        <h1> Estas são suas tarefas: </h1>
-        <div class="toDoList">
-        
         </div>
+        <h1> Estas são suas tarefas: </h1>
+        <div class="toDoList"></div>
     </div>
 </body>
 <style>
-     body {
+    body {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #800080;
+            background: linear-gradient(to left, #3C1040, #EF6461)
         }
+    h1 {
+        color: white;
+    }
     .toDoList {
         text-align: center;
-        border: 1px solid #ccc;
-        padding: 20px; 
-        background-color: #8a2be2;
+        padding: 20px;
+    }
+    #item {
+        height: 27px;
+        vertical-align: middle;
+    }
+
+    button {
+        vertical-align: middle;
+    }
+    .makeToDoList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     }
 </style>
 <script src="./toDoList.js"></script>
