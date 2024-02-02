@@ -10,9 +10,24 @@ button.addEventListener("click", function(){
         itemList.push(newItem)
         myList.innerHTML = ""
         itemList.forEach(function(task) {
+            var listItem = document.createElement("div")
             var p = document.createElement("p")
+            var button = document.createElement("button")
+            var checkImage = document.createElement("img")
+            checkImage.src = "public/images/check.svg"
+            Object.assign(listItem.style, { display: "flex",    
+                                            alignItems: "center" })
+            Object.assign(p.style, { backgroundColor: "white",
+                                     height: "30px",
+                                     width: "200px" })
+            Object.assign(checkImage.style, { 
+                height: "23px",
+                                     width: "20px" })
+            button.appendChild(checkImage)
             p.textContent = task
-            myList.appendChild(p)
+            listItem.appendChild(p)
+            listItem.appendChild(button)
+            myList.appendChild(listItem)
         })
         item.value = ""
     }
